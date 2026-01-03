@@ -5,8 +5,10 @@ export default defineConfig({
   plugins: [react()],
   server: {
     host: true,
-    preview: {
-      allowedHosts: ['evoriseai.com.br']
-    }
+    allowedHosts: ['evoriseai.com.br']
+  },
+  preview: {
+    host: true,
+    allowedHosts: ['evoriseai.com.br']
   }
 })
