@@ -187,13 +187,18 @@ export default function App() {
     <div className="bg-evoblack text-white font-inter overflow-x-hidden">
       <div className="pointer-events-none fixed inset-0 z-0 bg-[radial-gradient(ellipse_at_top,_rgba(124,58,237,0.35),_transparent_65%)]" />
 
-      <header className="fixed top-0 left-0 w-full z-50 bg-black/50 backdrop-blur-xl border-b border-purple-700/20">
-        <div className="mx-auto flex max-w-6xl items-center justify-center gap-8 px-6 py-5">
-          <a href="#inicio" className="text-2xl font-semibold tracking-[0.3em] uppercase text-purple-400">
-            Evorise
-          </a>
-        </div>
-      </header>
+  <header className="fixed top-0 left-0 w-full z-50 bg-black/50 backdrop-blur-xl border-b border-purple-700/20">
+  <div className="mx-auto flex max-w-6xl items-center justify-center gap-8 px-6 py-5">
+    <a href="#inicio" className="flex items-center">
+      <img 
+        src="/logo.png" 
+        alt="logo evorise site.png" 
+        className="h-10 w-auto"
+      />
+    </a>
+  </div>
+</header>
+
 
       <main id="inicio" className="relative">
         <section className="relative flex min-h-screen items-center justify-center px-6 pt-32">
