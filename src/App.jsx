@@ -238,7 +238,7 @@ export default function App() {
           >
             <span className="text-xs uppercase tracking-[0.3em] text-purple-400">quem somos</span>
             <h2 className="text-4xl font-semibold text-purple-100">
-              Integramos tecnologia, estética e propósito para negócios que valorizam performance e identidade.
+              Integramos tecnologia e propósito para negócios que valorizam performance.
             </h2>
             <p className="text-gray-300">
               A Evorise nasceu para tornar a automação e os softwares de gestão simples, eficientes e conectados à
@@ -460,7 +460,7 @@ export default function App() {
           <div>
             <p className="text-xs uppercase tracking-[0.3em] text-purple-300">Evorise</p>
             <p className="mt-2 max-w-sm text-xs text-gray-400">
-              Criamos automações e softwares simples com precisão tecnológica e estética impecável.
+              Criamos automações e softwares simples com precisão tecnológica.
             </p>
           </div>
           <div className="flex items-center gap-6 text-xl text-purple-300">
