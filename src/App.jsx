@@ -173,8 +173,7 @@ function useHeroParticles(particleCount = 60) {
 }
 
 export default function App() {
-  const particleCount = typeof window !== 'undefined' && window.innerWidth < 768 ? 40 : 75;
-  const canvasRef = useHeroParticles(particleCount);
+  const canvasRef = useHeroParticles(75);
 
   const socialLinks = useMemo(
     () => [
@@ -187,18 +186,13 @@ export default function App() {
     <div className="bg-evoblack text-white font-inter overflow-x-hidden">
       <div className="pointer-events-none fixed inset-0 z-0 bg-[radial-gradient(ellipse_at_top,_rgba(124,58,237,0.35),_transparent_65%)]" />
 
-  <header className="fixed top-0 left-0 w-full z-50 bg-black/50 backdrop-blur-xl border-b border-purple-700/20">
-  <div className="mx-auto flex max-w-6xl items-center justify-center gap-8 px-6 py-5">
-    <a href="#inicio" className="flex items-center">
-      <img 
-        src="/logo.png" 
-        alt="logo evorise site.png" 
-        className="h-10 w-auto"
-      />
-    </a>
-  </div>
-</header>
-
+      <header className="fixed top-0 left-0 w-full z-50 bg-black/50 backdrop-blur-xl border-b border-purple-700/20">
+        <div className="mx-auto flex max-w-6xl items-center justify-center gap-8 px-6 py-5">
+          <a href="#inicio" className="text-2xl font-semibold tracking-[0.3em] uppercase text-purple-400">
+            Evorise
+          </a>
+        </div>
+      </header>
 
       <main id="inicio" className="relative">
         <section className="relative flex min-h-screen items-center justify-center px-6 pt-32">
@@ -211,10 +205,7 @@ export default function App() {
             animate="show"
             className="relative z-10 max-w-4xl text-center"
           >
-            <span className="inline-flex items-center rounded-full border border-purple-500/40 px-4 py-2 text-xs uppercase tracking-[0.35em] text-purple-200">
-              automação e softwares
-            </span>
-            <h1 className="mt-6 text-3xl sm:text-4xl font-semibold leading-tight text-purple-200 md:text-6xl md:leading-[1.15]">
+            <h1 className="text-4xl font-semibold leading-tight text-purple-200 md:text-6xl md:leading-[1.15]">
               Automação e softwares simples para negócios que querem crescer com eficiência e clareza.
             </h1>
             <p className="mt-6 text-base text-gray-300 md:text-lg">
@@ -225,7 +216,7 @@ export default function App() {
             <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
               <a
                 href="#contato"
-                className="w-full sm:w-auto rounded-full bg-gradient-to-r from-purple-600 to-purple-400 px-10 py-3 text-sm font-medium uppercase tracking-[0.25em] text-black shadow-luxe transition hover:shadow-none text-center"
+                className="rounded-full bg-gradient-to-r from-purple-600 to-purple-400 px-10 py-3 text-sm font-medium uppercase tracking-[0.25em] text-black shadow-luxe transition hover:shadow-none"
               >
                 Agendar Reunião
               </a>
