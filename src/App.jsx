@@ -173,7 +173,8 @@ function useHeroParticles(particleCount = 60) {
 }
 
 export default function App() {
-  const canvasRef = useHeroParticles(75);
+  const particleCount = typeof window !== 'undefined' && window.innerWidth < 768 ? 40 : 75;
+  const canvasRef = useHeroParticles(particleCount);
 
   const socialLinks = useMemo(
     () => [
@@ -205,7 +206,10 @@ export default function App() {
             animate="show"
             className="relative z-10 max-w-4xl text-center"
           >
-            <h1 className="text-4xl font-semibold leading-tight text-purple-200 md:text-6xl md:leading-[1.15]">
+            <span className="inline-flex items-center rounded-full border border-purple-500/40 px-4 py-2 text-xs uppercase tracking-[0.35em] text-purple-200">
+              automação e softwares
+            </span>
+            <h1 className="mt-6 text-3xl sm:text-4xl font-semibold leading-tight text-purple-200 md:text-6xl md:leading-[1.15]">
               Automação e softwares simples para negócios que querem crescer com eficiência e clareza.
             </h1>
             <p className="mt-6 text-base text-gray-300 md:text-lg">
@@ -216,7 +220,7 @@ export default function App() {
             <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
               <a
                 href="#contato"
-                className="rounded-full bg-gradient-to-r from-purple-600 to-purple-400 px-10 py-3 text-sm font-medium uppercase tracking-[0.25em] text-black shadow-luxe transition hover:shadow-none"
+                className="w-full sm:w-auto rounded-full bg-gradient-to-r from-purple-600 to-purple-400 px-10 py-3 text-sm font-medium uppercase tracking-[0.25em] text-black shadow-luxe transition hover:shadow-none text-center"
               >
                 Agendar Reunião
               </a>
