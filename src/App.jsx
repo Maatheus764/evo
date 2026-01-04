@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { useEffect, useMemo, useRef } from "react";
-import { FaInstagram, FaLinkedin, FaWhatsapp } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
 import AgendarReuniao from "./components/AgendarReuniao.jsx";
 
 const fadeUp = {
@@ -29,15 +29,6 @@ const fadeRight = {
     transition: { duration: 0.8, ease: "easeOut" },
   },
 };
-
-const navLinks = [
-  { href: "#inicio", label: "Início" },
-  { href: "#sobre", label: "Sobre" },
-  { href: "#servicos", label: "Soluções" },
-  { href: "#ferramentas", label: "Ferramentas" },
-  { href: "#depoimentos", label: "Depoimentos" },
-  { href: "#contato", label: "Contato" },
-];
 
 const services = [
   {
@@ -186,9 +177,7 @@ export default function App() {
 
   const socialLinks = useMemo(
     () => [
-      
       { icon: FaInstagram, href: "https://instagram.com/evoriseai", label: "Instagram" },
-    
     ],
     []
   );
@@ -198,30 +187,9 @@ export default function App() {
       <div className="pointer-events-none fixed inset-0 z-0 bg-[radial-gradient(ellipse_at_top,_rgba(124,58,237,0.35),_transparent_65%)]" />
 
       <header className="fixed top-0 left-0 w-full z-50 bg-black/50 backdrop-blur-xl border-b border-purple-700/20">
-        <div className="mx-auto flex max-w-6xl items-center justify-between gap-8 px-6 py-5">
+        <div className="mx-auto flex max-w-6xl items-center justify-center gap-8 px-6 py-5">
           <a href="#inicio" className="text-2xl font-semibold tracking-[0.3em] uppercase text-purple-400">
             Evorise
-          </a>
-          <div className="hidden items-center gap-16 md:flex">
-            <nav className="flex items-center gap-8 text-sm uppercase tracking-[0.2em] text-gray-300">
-              {navLinks.map((link) => (
-                <a key={link.href} href={link.href} className="transition hover:text-purple-400">
-                  {link.label}
-                </a>
-              ))}
-            </nav>
-            <a
-              href="#contato"
-              className="inline-flex items-center justify-center rounded-full border border-purple-500/60 px-5 py-2 text-center text-xs font-medium uppercase tracking-[0.2em] leading-none text-purple-200 transition hover:bg-purple-600/20"
-            >
-              Agendar Reunião
-            </a>
-          </div>
-          <a
-            href="#contato"
-            className="inline-flex items-center justify-center rounded-full border border-purple-500/60 px-4 py-2 text-center text-[0.68rem] font-medium uppercase tracking-[0.3em] leading-none text-purple-200 transition hover:bg-purple-600/20 md:hidden"
-          >
-            Agendar Reunião
           </a>
         </div>
       </header>
@@ -237,10 +205,7 @@ export default function App() {
             animate="show"
             className="relative z-10 max-w-4xl text-center"
           >
-            <span className="inline-flex items-center rounded-full border border-purple-500/40 px-4 py-2 text-xs uppercase tracking-[0.35em] text-purple-200">
-              automação e softwares
-            </span>
-            <h1 className="mt-6 text-4xl font-semibold leading-tight text-purple-200 md:text-6xl md:leading-[1.15]">
+            <h1 className="text-4xl font-semibold leading-tight text-purple-200 md:text-6xl md:leading-[1.15]">
               Automação e softwares simples para negócios que querem crescer com eficiência e clareza.
             </h1>
             <p className="mt-6 text-base text-gray-300 md:text-lg">
@@ -250,14 +215,8 @@ export default function App() {
             </p>
             <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
               <a
-                href="#sobre"
-                className="rounded-full bg-gradient-to-r from-purple-600 to-purple-400 px-10 py-3 text-sm font-medium uppercase tracking-[0.25em] text-black shadow-luxe transition hover:shadow-none"
-              >
-                Descubra a Experiência
-              </a>
-              <a
                 href="#contato"
-                className="rounded-full border border-purple-400/60 px-10 py-3 text-sm font-medium uppercase tracking-[0.25em] text-purple-200 transition hover:bg-purple-700/20"
+                className="rounded-full bg-gradient-to-r from-purple-600 to-purple-400 px-10 py-3 text-sm font-medium uppercase tracking-[0.25em] text-black shadow-luxe transition hover:shadow-none"
               >
                 Agendar Reunião
               </a>
@@ -472,7 +431,7 @@ export default function App() {
                 className="relative overflow-hidden rounded-3xl border border-purple-500/20 bg-black/60 p-10 text-left shadow-[0_25px_80px_-60px_rgba(124,58,237,0.55)]"
               >
                 <div className="absolute -left-10 top-0 h-24 w-24 rounded-full bg-purple-400/10 blur-2xl" />
-                <p className="text-sm italic text-gray-300">“{testimonial.quote}”</p>
+                <p className="text-sm italic text-gray-300">"{testimonial.quote}"</p>
                 <div className="mt-8">
                   <p className="text-sm font-semibold text-purple-200">{testimonial.name}</p>
                   <p className="text-xs uppercase tracking-[0.25em] text-gray-500">{testimonial.role}</p>
