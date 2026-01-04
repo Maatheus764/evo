@@ -30,6 +30,14 @@ const fadeRight = {
   },
 };
 
+const navLinks = [
+  { href: "#inicio", label: "Início" },
+  { href: "#sobre", label: "Sobre" },
+  { href: "#servicos", label: "Soluções" },
+  { href: "#ferramentas", label: "Ferramentas" },
+  { href: "#depoimentos", label: "Depoimentos" },
+  { href: "#contato", label: "Contato" },
+];
 
 const services = [
   {
